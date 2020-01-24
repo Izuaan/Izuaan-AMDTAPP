@@ -32,8 +32,8 @@ export default class App extends React.Component {
       };
 
   render() {
-    const todos= this.state.todos.reverse().map((todo,key)) =>
-    <View style{{ flexDirection:'row', marginTop: 20}}>
+    const todos= this.state.todos.reverse().map((todo, key) =>
+    <View style={{ flexDirection:'row', marginTop: 20}}>
       <TouchableOpacity style= {{
         width:20,
         height:20,
@@ -43,10 +43,9 @@ export default class App extends React.Component {
         margin: 15,
       }}>
         </TouchableOpacity>
-        <Text style={{ paddingLeft: 5, magtinTop:10, fontSize:28, color:"white",}}>{todo.title}
+        <Text style={{paddingLeft:5, marginTop:10, fontSize:28, color:'white'}}/>{todo.title}
       </View>
-      );
-      
+    );
     return ( 
         <LinearGradient colors={['#527f9e', '#24386f']} style={{flex:1}}>
         <StatusBar barStyle="light-content" />
