@@ -39,11 +39,11 @@ export default class App extends React.Component {
         height:20,
         borderRadius: 15, 
         borderWidth: 3,
-        borderColor:'white',
+        borderColor:'blue',
         margin: 15,
       }}>
         </TouchableOpacity>
-        <Text style={{paddingLeft:5, marginTop:10, fontSize:28, color:'white'}}/>{todo.title}
+        <Text style={{paddingLeft:5, marginTop:1, fontSize:28, color:'aqua'}}>{todo.title} </Text>
       </View>
     );
     return ( 
@@ -53,19 +53,23 @@ export default class App extends React.Component {
           <TextInput 
           style={styles.input}
           onSubmitEditing={this.addItem}
-          onChangeText={this.changetext}
-          placeholder= "Add a thing to do"
+          onChangeText={this.changeText}
+          placeholder= "Type here to add a to do."
           value={this.state.inputValue}
-          placeholderTextColor={'#fff'}
+          placeholderTextColor={'#000000)'}
           multiline={true}
           autoCapitalize="sentences"
           underlineColorAndroid="transparent"
-          selectionColor={"white"}
+          spellCheck={true}
+          selectionColor={"black"}
           maxLength={30}
           returnKeyType="done"
-          autoCorrect={false}
+          autoCorrect={true}
           blurOnSubmit={true}
         />
+        </View>
+        <View styles={styles.pinput}>
+        {todos}
         </View>
         </LinearGradient>
     );
@@ -80,25 +84,8 @@ const styles = {
     paddingRight:15,
     paddingLeft:15,
     fontSize:29,
-    color:"white",
+    color:"red",
     fontWeight: '500'
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
